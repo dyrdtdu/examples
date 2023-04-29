@@ -1,0 +1,36 @@
+// Load the gel image
+open("path/to/gel/image.tif");
+
+// Set the scale of the image (if needed)
+run("Set Scale...", "distance=1 known=100 pixel=1 unit=mm");
+
+// Draw the lanes (assuming 5 lanes in this example)
+makeLine(50, 100, 500, 100);
+makeLine(50, 200, 500, 200);
+makeLine(50, 300, 500, 300);
+makeLine(50, 400, 500, 400);
+makeLine(50, 500, 500, 500);
+
+// Draw the bands (assuming 4 bands in this example)
+makeLine(80, 120, 120, 120);
+makeLine(200, 120, 240, 120);
+makeLine(320, 120, 360, 120);
+makeLine(440, 120, 480, 120);
+
+// Add labels to the lanes and bands
+setFont("SansSerif", 16, "bold");
+setForegroundColor(255, 255, 255);
+setBackgroundColor(0, 0, 0);
+
+// Lanes labels
+addText("Lane 1", 30, 90);
+addText("Lane 2", 30, 190);
+addText("Lane 3", 30, 290);
+addText("Lane 4", 30, 390);
+addText("Lane 5", 30, 490);
+
+// Bands labels
+addText("Band 1", 70, 110);
+addText("Band 2", 190, 110);
+addText("Band 3", 310, 110);
+addText("Band 4", 430, 110);
