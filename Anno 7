@@ -1,0 +1,29 @@
+// Open the gel image
+open("path/to/your/gel/image.tif");
+
+// Set the line width for the annotations
+lineWidth = 1;
+
+// Draw a line to indicate the position of the wells
+setLineWidth(lineWidth);
+setForegroundColor(255, 255, 255); // Set color to white
+drawLine(0, 100, getWidth(), 100); // Change the y-coordinate to position the line
+
+// Draw lines to indicate the position of the bands
+setLineWidth(lineWidth);
+setForegroundColor(255, 0, 0); // Set color to red
+drawLine(50, 150, 150, 150); // Change the x-coordinates to position the line
+setForegroundColor(0, 255, 0); // Set color to green
+drawLine(200, 150, 300, 150); // Change the x-coordinates to position the line
+setForegroundColor(0, 0, 255); // Set color to blue
+drawLine(350, 150, 450, 150); // Change the x-coordinates to position the line
+
+// Add text labels for the lanes and bands
+setFontSize(12); // Set font size for the text
+setForegroundColor(255, 255, 255); // Set color to white
+addText("Wells", 10, 80); // Change the x- and y-coordinates to position the text
+setForegroundColor(255, 0, 0); // Set color to red
+addText("Band 1", 70, 130); // Change the x- and y-coordinates to position the text
+setForegroundColor(0, 255, 0); // Set color to green
+addText("Band 2", 220, 130); // Change the x- and y-coordinates to position the text
+set
